@@ -59,7 +59,7 @@ void loop() {
 
   mqtt.loop();
 
-  if (millis() - lastReadAt > 30) { // 30ms interval
+  if (millis() - lastReadAt > 1) { // 1ms interval
     if (digitalRead(SENSOR_PIN) == LOW) {
       if (alarmo < 20) {
         alarmo++;
